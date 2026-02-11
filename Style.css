@@ -1,0 +1,166 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ffe6f2, #fff);
+    color: #333;
+}
+
+/* NAVBAR */
+header {
+    background: white;
+    padding: 15px 40px;
+    box-shadow: 0 3px 10px rgba(255, 105, 180, 0.15);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff4da6;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #ff0080;
+}
+
+/* HERO */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 80px;
+}
+
+#hero h2 {
+    font-size: 38px;
+    color: #ff4da6;
+}
+
+#hero p {
+    margin-top: 10px;
+}
+
+/* FOTO PROFIL */
+#hero img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #ffcce6;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+}
+
+/* SECTION UMUM */
+section {
+    padding: 60px 80px;
+}
+
+/* ABOUT */
+#about {
+    background: white;
+    border-radius: 20px;
+    margin: 20px 80px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* SKILLS TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(255,105,180,0.15);
+}
+
+th {
+    background: #ff80bf;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #fff0f7;
+}
+
+/* CONTACT FORM */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(255,105,180,0.15);
+    max-width: 400px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ffcce6;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #ff4da6;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff0080;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    margin-top: 40px;
+}
+
+/* ========================= */
+/* RESPONSIVE MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    #about {
+        margin: 20px;
+    }
+
+}
+
