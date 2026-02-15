@@ -11,6 +11,13 @@ body {
     background: linear-gradient(135deg, #ffe6f2, #fff);
     color: #333;
 }
+body {
+  background: #ffe4f2;
+}
+
+header {
+  background: #ffb6d9;
+}
 
 /* NAVBAR */
 header {
