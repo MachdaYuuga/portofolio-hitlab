@@ -103,95 +103,66 @@ section {
 #about {
     background: white;
     border-radius: 20px;
-    margin: 20px 80px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6ec, #ffeaf5);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-/* SKILLS TABLE */
-table {
-    width: 100%;
-    border-collapse: collapse;
+.container {
     background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(255,105,180,0.15);
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-th {
-    background: #ff80bf;
-    color: white;
-    padding: 12px;
-}
-
-td {
-    padding: 12px;
+h1 {
     text-align: center;
 }
 
-tr:nth-child(even) {
-    background: #fff0f7;
-}
-
-/* CONTACT FORM */
 form {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(255,105,180,0.15);
-    max-width: 400px;
+    display: flex;
+    gap: 8px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 8px;
-    border: 1px solid #ffcce6;
+input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
 button {
-    margin-top: 15px;
-    padding: 10px;
-    width: 100%;
+    background: hotpink;
     border: none;
-    background: #ff4da6;
     color: white;
-    border-radius: 8px;
-    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #ff0080;
+    background: deeppink;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: white;
-    margin-top: 40px;
+li {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    background: #fff0f7;
+    padding: 8px;
+    border-radius: 6px;
 }
 
-/* ========================= */
-/* RESPONSIVE MOBILE */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-    #hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    section {
-        padding: 40px 20px;
-    }
-
-    #about {
-        margin: 20px;
-    }
-
+.completed {
+    text-decoration: line-through;
+    color: gray;
 }
 
+.delete-btn {
+    background: red;
+    padding: 4px 8px;
+}
