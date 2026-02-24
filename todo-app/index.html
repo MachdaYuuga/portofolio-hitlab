@@ -1,118 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Anggun</title>
-
-    <!-- CSS -->
+    <title>To Do List Anggun</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
-<header>
-    <h1>Portofolio Pribadi</h1>
+<div class="container">
+    <h1>📝 To Do List</h1>
 
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <form id="todoForm">
+        <input type="text" id="todoInput" placeholder="Tulis tugas..." />
+        <button type="submit">Tambah</button>
+    </form>
 
-    <!-- DARK MODE BUTTON -->
-    <button id="darkModeToggle">🌙 Dark Mode</button>
-</header>
+    <ul id="todoList"></ul>
+</div>
 
-
-<!-- ================= MAIN ================= -->
-<main>
-
-    <!-- HERO -->
-    <section id="hero">
-        <h2>Anggun Machda Apriliana</h2>
-        <p>Mahasiswi Sistem Informasi | Web Development Enthusiast</p>
-
-        <img src="https://media.licdn.com/dms/image/v2/D5603AQHbdLO6W1EYww/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1688661122876?e=1772064000&v=beta&t=WHpJNZBJ98ka_X2d0OeZgfMd_dsySPZ4PAwz0PcrxNY"
-        alt="Foto Anggun"
-        width="200">
-    </section>
-
-
-    <!-- ABOUT -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Saya adalah mahasiswi Sistem Informasi yang tertarik pada bidang web development,
-            pemrograman, dan desain. Saat ini saya sedang mempelajari HTML, CSS, dan JavaScript
-            untuk mengembangkan kemampuan saya di dunia teknologi.
-        </p>
-    </section>
-
-
-    <!-- SKILLS -->
-    <section id="skills">
-        <h2>Skills</h2>
-
-        <table border="1">
-            <tr>
-                <th>No</th>
-                <th>Nama Skill</th>
-                <th>Tingkat Kemahiran</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>HTML</td>
-                <td>Basic</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>CSS</td>
-                <td>Basic</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>JavaScript</td>
-                <td>Basic</td>
-            </tr>
-        </table>
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Nama kamu" required>
-            <input type="email" placeholder="Email kamu" required>
-            <textarea placeholder="Pesan kamu" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-
-        <!-- PESAN SUKSES -->
-        <p id="formMessage"></p>
-    </section>
-
-</main>
-
-
-<!-- ================= FOOTER ================= -->
-<footer>
-    <p>&copy; 2026 Anggun Machda Apriliana</p>
-</footer>
-
-
-<!-- ================= JAVASCRIPT ================= -->
 <script src="script.js"></script>
-
 </body>
 </html>
