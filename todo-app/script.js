@@ -1,34 +1,68 @@
-// DARK MODE TOGGLE
-const toggleBtn = document.getElementById("darkModeToggle");
-const body = document.body;
+const form = document.getElementById("todoForm");
+const input = document.getElementById("todoInput");
+const list = document.getElementById("todoList");
 
-toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark");
-});
+let todos = JSON.parse(localStorage.getItem("todos")) || [];
 
-
-// FORM SUBMIT TANPA RELOAD + PESAN SUKSES
-const form = document.getElementById("contactForm");
-const message = document.getElementById("formMessage");
+renderTodos();
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const nama = document.getElementById("name").value;
+    const text = input.value.trim();
 
-    message.textContent = `Halo ${nama}, pesan Anda berhasil terkirim!`;
+    // VALIDASI
+    if (text === "") {
+        alert("Tugas tidak boleh kosong!");
+        return;
+    }
+
+    todos.push({
+        text: text,
+        completed: false
+    });
+
+    saveTodos();
+    renderTodos();
     form.reset();
 });
 
+function renderTodos() {
+    list.innerHTML = "";
 
-// SMOOTH SCROLL
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
+    todos.forEach((todo, index) => {
+        const li = document.createElement("li");
 
-        const target = document.querySelector(this.getAttribute("href"));
-        target.scrollIntoView({
-            behavior: "smooth"
+        if (todo.completed) {
+            li.classList.add("completed");
+        }
+
+        li.textContent = todo.text;
+
+        // klik = tandai selesai
+        li.addEventListener("click", () => {
+            todo.completed = !todo.completed;
+            saveTodos();
+            renderTodos();
         });
+
+        // tombol hapus
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Hapus";
+        delBtn.classList.add("delete-btn");
+
+        delBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            todos.splice(index, 1);
+            saveTodos();
+            renderTodos();
+        });
+
+        li.appendChild(delBtn);
+        list.appendChild(li);
     });
-});
+}
+
+function saveTodos() {
+    localStorage.setItem("todos", JSON.stringify(todos));
+}
